@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quotes",
+  "info": {
+    "singularName": "quote",
+    "pluralName": "quotes",
+    "displayName": "Quote"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "status_quote": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "enviado",
+        "pendente"
+      ]
+    },
+    "quote_send_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "quote_validate_date": {
+      "type": "datetime"
+    },
+    "observations": {
+      "type": "blocks"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "quotes"
+    },
+    "total_value": {
+      "type": "decimal",
+      "required": true
+    },
+    "notification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::notification.notification",
+      "mappedBy": "quote"
+    }
+  }
+}
