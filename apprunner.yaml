@@ -1,5 +1,4 @@
 version: 1.0
-
 runtime: nodejs18
 
 build:
@@ -10,7 +9,8 @@ build:
 
 run:
   command: yarn start
-  port: 1337
+  network:
+    port: 1337
 
 healthcheck:
   path: /_health
