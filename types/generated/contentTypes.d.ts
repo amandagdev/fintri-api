@@ -384,7 +384,8 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    cpf_or_cnpj: Schema.Attribute.String & Schema.Attribute.Required;
+    address: Schema.Attribute.String;
+    cpf_or_cnpj: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
