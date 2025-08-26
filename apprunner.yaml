@@ -11,8 +11,3 @@ run:
   command: yarn start
   network:
     port: 1337
-
-healthcheck:
-  path: /_health
-  interval: 20
-  timeout: 10
