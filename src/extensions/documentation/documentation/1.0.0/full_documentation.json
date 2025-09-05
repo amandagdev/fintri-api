@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-08-26T19:17:56.794Z"
+    "x-generation-date": "2025-09-05T22:36:43.553Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -3153,14 +3153,6 @@
                 "title": {
                   "type": "string"
                 },
-                "description": {},
-                "status_quote": {
-                  "type": "string",
-                  "enum": [
-                    "enviado",
-                    "pendente"
-                  ]
-                },
                 "quote_send_date": {
                   "type": "string",
                   "format": "date-time"
@@ -3521,6 +3513,10 @@
                   "type": "number",
                   "format": "float"
                 },
+                "discount": {
+                  "type": "number",
+                  "format": "float"
+                },
                 "notification": {
                   "type": "object",
                   "properties": {
@@ -3600,6 +3596,9 @@
                       }
                     }
                   }
+                },
+                "description": {
+                  "type": "string"
                 },
                 "createdAt": {
                   "type": "string",
@@ -3836,14 +3835,6 @@
               },
               "title": {
                 "type": "string"
-              },
-              "description": {},
-              "status_quote": {
-                "type": "string",
-                "enum": [
-                  "enviado",
-                  "pendente"
-                ]
               },
               "quote_send_date": {
                 "type": "string",
@@ -4205,6 +4196,10 @@
                 "type": "number",
                 "format": "float"
               },
+              "discount": {
+                "type": "number",
+                "format": "float"
+              },
               "notification": {
                 "type": "object",
                 "properties": {
@@ -4284,6 +4279,9 @@
                     }
                   }
                 }
+              },
+              "description": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -4415,8 +4413,6 @@
           "data": {
             "required": [
               "title",
-              "description",
-              "status_quote",
               "quote_send_date",
               "total_value"
             ],
@@ -4424,14 +4420,6 @@
             "properties": {
               "title": {
                 "type": "string"
-              },
-              "description": {},
-              "status_quote": {
-                "type": "string",
-                "enum": [
-                  "enviado",
-                  "pendente"
-                ]
               },
               "quote_send_date": {
                 "type": "string",
@@ -4457,6 +4445,10 @@
                 "type": "number",
                 "format": "float"
               },
+              "discount": {
+                "type": "number",
+                "format": "float"
+              },
               "notification": {
                 "oneOf": [
                   {
@@ -4467,6 +4459,9 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "description": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -4528,8 +4523,6 @@
         "type": "object",
         "required": [
           "title",
-          "description",
-          "status_quote",
           "quote_send_date",
           "total_value"
         ],
@@ -4542,14 +4535,6 @@
           },
           "title": {
             "type": "string"
-          },
-          "description": {},
-          "status_quote": {
-            "type": "string",
-            "enum": [
-              "enviado",
-              "pendente"
-            ]
           },
           "quote_send_date": {
             "type": "string",
@@ -4599,14 +4584,6 @@
                     "title": {
                       "type": "string"
                     },
-                    "description": {},
-                    "status_quote": {
-                      "type": "string",
-                      "enum": [
-                        "enviado",
-                        "pendente"
-                      ]
-                    },
                     "quote_send_date": {
                       "type": "string",
                       "format": "date-time"
@@ -4628,6 +4605,10 @@
                       }
                     },
                     "total_value": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "discount": {
                       "type": "number",
                       "format": "float"
                     },
@@ -4963,6 +4944,9 @@
                         }
                       }
                     },
+                    "description": {
+                      "type": "string"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -5077,6 +5061,10 @@
             "type": "number",
             "format": "float"
           },
+          "discount": {
+            "type": "number",
+            "format": "float"
+          },
           "notification": {
             "type": "object",
             "properties": {
@@ -5087,6 +5075,9 @@
                 "type": "string"
               }
             }
+          },
+          "description": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",

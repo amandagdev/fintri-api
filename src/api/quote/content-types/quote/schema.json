@@ -15,18 +15,6 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "blocks",
-      "required": true
-    },
-    "status_quote": {
-      "type": "enumeration",
-      "required": true,
-      "enum": [
-        "enviado",
-        "pendente"
-      ]
-    },
     "quote_send_date": {
       "type": "datetime",
       "required": true
@@ -47,11 +35,17 @@
       "type": "decimal",
       "required": true
     },
+    "discount": {
+      "type": "decimal"
+    },
     "notification": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::notification.notification",
       "mappedBy": "quote"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

@@ -457,7 +457,8 @@ export interface ApiQuoteQuote extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    description: Schema.Attribute.Text;
+    discount: Schema.Attribute.Decimal;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::quote.quote'> &
       Schema.Attribute.Private;
@@ -469,8 +470,6 @@ export interface ApiQuoteQuote extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     quote_send_date: Schema.Attribute.DateTime & Schema.Attribute.Required;
     quote_validate_date: Schema.Attribute.DateTime;
-    status_quote: Schema.Attribute.Enumeration<['enviado', 'pendente']> &
-      Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     total_value: Schema.Attribute.Decimal & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
